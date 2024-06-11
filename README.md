@@ -15,3 +15,5 @@
 
 2.- Terminar la base de datos:
     `docker compose down`
+
+**NOTA: Credenciales dentro de docker-compose.yml**
