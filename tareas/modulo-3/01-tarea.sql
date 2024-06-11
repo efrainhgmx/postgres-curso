@@ -21,3 +21,5 @@ update users set name = 'Efrain Hernandez' where id = 1;
 -- 6. Borrar el último registro de la tabla
 select * from users where id = (select count(*) from users);
 delete from users  where id = (select count(*) from users);
+
+select max(id) from users;
