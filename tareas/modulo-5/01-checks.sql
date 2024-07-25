@@ -23,4 +23,5 @@ alter table countrylanguage add check(
  (percentage >= 0 and percentage <= 100 )
 );
 
-
+--Eliminar un constrain
+alter table countrylanguage DROP constraint "countrylanguage_percentage_check";
