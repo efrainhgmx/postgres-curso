@@ -407,6 +407,7 @@ set hire_date = (hire_date + INTERVAL '24 years');
 
 --RANGOS
 --CASE - THEN
+--CASE: Requiere por lo menos una condición
 select first_name, last_name, hire_date,
 CASE 
 	WHEN hire_date > now() - INTERVAL '1 year'  then '1 Año o menos'
@@ -460,7 +461,10 @@ CREATE TABLE usersDual (
 
 
 --Generación de id mediante uuid
+--Verifica que este instalada la extension
+select gen_random_uuid();
 
+--Instalar/Eliminar la extensión
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 DROP EXTENSION "uuid-ossp";
 
@@ -480,7 +484,8 @@ DROP SEQUENCE user_sequence;
 
 CREATE SEQUENCE user_sequence;
 
-
+-- currval() muestra la secuencia actual
+-- nextval() muestra la siguiente secuencia
 select currval('user_sequence'), nextval('user_sequence'), currval('user_sequence');
 
 Create TABLE users6 (
@@ -499,6 +504,6 @@ Create TABLE users6 (
 
 
 
---************ || S E C C I O N  8|| ******************************************
---************ || S E C C I O N  8|| ******************************************
---************ || S E C C I O N  8|| ******************************************
+--************ || S E C C I O N  11|| ******************************************
+--************ || S E C C I O N  12|| ******************************************
+--************ || S E C C I O N  13|| ******************************************
